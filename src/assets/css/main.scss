@@ -198,26 +198,26 @@ nav#section-content {
             -o-transform: translate(-50%, -50%);
         }
     }
-}
 
-
-.active {
-    color: $dark-hover;
-    border: 2px solid $dark-hover;
-    background: $white;
-    border-radius: 50px !important;
-    padding: .6rem;
-    -webkit-border-radius: 50px !important;
-    -moz-border-radius: 50px !important;
-    -ms-border-radius: 50px !important;
-    -o-border-radius: 50px !important;
-    animation: scale .7s ease-in-out infinite alternate;
-    -webkit-animation: scale .7s ease-in-out infinite alternate;
-
-    &:is(:hover, :focus) {
-        color: $dark-hover;
+    .active {
+        color: $dark-hover !important;
+        border: 2px solid $dark-hover;
+        background: $white !important;
+        border-radius: 50px !important;
+        padding: .6rem;
+        -webkit-border-radius: 50px !important;
+        -moz-border-radius: 50px !important;
+        -ms-border-radius: 50px !important;
+        -o-border-radius: 50px !important;
+        animation: scale .7s ease-in-out infinite alternate;
+        -webkit-animation: scale .7s ease-in-out infinite alternate;
+    
+        &:is(:hover, :focus) {
+            color: $dark-hover;
+        }
     }
 }
+
 
 @keyframes scale {
     0% {

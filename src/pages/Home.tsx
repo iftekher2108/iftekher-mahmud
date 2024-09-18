@@ -1,28 +1,25 @@
-// import { useState } from 'react'
-// import reactLogo from '../assets/react.svg'
-// import viteLogo from '/vite.svg'
-// // import '../App.css'
+// import '../App.css'
 import '../assets/css/main.min.css'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import TypeName from '../components/TypeName'
 import { useEffect } from 'react'
+import Footer from '../components/footer'
+import ProjectCard from '../components/ProjectCard'
 
 
 function Home() {
-  // const [count, setCount] = useState(0)
 
+useEffect(() => {
+  const e = document.querySelector('.intro');
+  setTimeout(() => {
+    e!.classList.add("animate__hinge");
+  },2500)
 
-// useEffect(() => {
-//   const e = document.querySelector('.intro');
-//   setTimeout(() => {
-//     e!.classList.add("animate__hinge");
-//   },2000)
-
-//     setTimeout(() => {
-//       e!.classList.add("hide");
-//     }, 5000)
-// },[])
+    setTimeout(() => {
+      e!.classList.add("hide");
+    }, 5000)
+},[])
 
 
   return (
@@ -36,7 +33,7 @@ function Home() {
     {/*  background web  */}
 
 
-    {/* <div className="animate__animated intro d-flex flex-column align-items-center justify-content-center">
+    <div className="animate__animated intro d-flex flex-column align-items-center justify-content-center">
         <div className="col-md-3 col-5">
             <img src="./image/banner.jpg" className="img-fluid rounded-3"  alt="profile image"/>
         </div>
@@ -45,14 +42,14 @@ function Home() {
         </h1>
         <div className="px-8 mx-5 border-2 border-bottom border-white" style={{width:"50%"}}></div>
         <h4 className="text-uppercase mt-2 text-white">Full Stack Developer</h4>
-    </div> */}
+    </div>
 
      {/* intro section  */}
 
 
 
       <Navbar />
-      <main data-bs-spy="scroll" data-bs-target="#section-content" data-bs-smooth-scroll="true" className="scrollspy-example">
+      <main>
         <div id="home" className="container-fluid overflow-hidden position-relative">
 
           <div id="particles" className="position-absolute z-2" style={{ height: '100vh' }}></div>
@@ -158,158 +155,85 @@ function Home() {
                       border-warning ">Live Projects</h2>
 
           </div>
-
+  
           <div className="project-content" data-aos="zoom-in">
             <div className="project-photo row g-3 p-3 m-0">
-              {/* couple web  */}
-              <div className=" col-lg-3 col-md-6 col-sm-12">
-                <div className="project-hover card">
-                  <img src="image/happiness-project.jpg" className="img-fluid object-fit-cover"
-                    alt="gallery-image" />
-                  <div className="p-3">
-                    <h5 title="Happiness-website design-project" className="text-primary">Happiness-website
-                      design-project</h5>
-                    <p title="HTML | CSS| SCSS | BOOTSTRAP | JAVASCRIPT | JQUERY | PLUGINS ">HTML | CSS|
-                      SCSS | BOOTSTRAP | JAVASCRIPT | JQUERY | PLUGINS </p>
-                    <button className="btn btn-primary fw-bold py-1 px-3"><a
-                      href="https://iftekher2108.github.io/happiness-template/"
-                      className="nav-link text-white">Live View</a></button>
 
-                  </div>
-                </div>
+              {/* Happiness web  */}
+                <ProjectCard
+                 category='bootstrap' 
+                 picture='image/happiness-project.jpg'
+                 title='Happiness Website Design Project'
+                 tech='HTML | CSS| SCSS | BOOTSTRAP | JAVASCRIPT | JQUERY | PLUGINS'
+                 link='https://iftekher2108.github.io/happiness-template'
+                  />
 
-              </div>
-
-              {/* ressurent web  */}
-              <div className="col-lg-3 col-md-6 col-sm-12">
-
-                <div className="project-hover card">
-                  <img src="image/restuarent-Project.jpg" className="img-fluid object-fit-cover"
-                    alt="gallery-image" />
-
-                  <div className="p-3">
-                    <h5 title="Restuarent website design-project" className="text-primary">Restuarent website
-                      design-project</h5>
-                    <p title="HTML | CSS| SCSS | BOOTSTRAP | JAVASCRIPT | JQUERY | PLUGINS ">
-                      HTML | CSS| SCSS | BOOTSTRAP | JAVASCRIPT | JQUERY | PLUGINS </p>
-                    <button className="btn btn-primary fw-bold py-1 px-3"><a
-                      href="https://iftekher2108.github.io/restaurent-templete/"
-                      className="nav-link text-white">Live View</a></button>
-                  </div>
-                </div>
-
-              </div>
+              {/* restaurant web  */}
+              <ProjectCard
+                 category='bootstrap' 
+                 picture='image/restuarent-Project.jpg'
+                 title='Restaurant Website Design Project'
+                 tech='HTML | CSS| SCSS | BOOTSTRAP | JAVASCRIPT | JQUERY | PLUGINS'
+                 link='https://iftekher2108.github.io/restaurent-templete'
+                  />
 
               {/* pet web  */}
-              <div className="col-lg-3 col-md-6 col-sm-12">
-
-                <div className="project-hover card">
-                  <img src="image/pet-consultency-Project-Presentation.jpg" className="img-fluid object-fit-cover"
-                    alt="gallery-image" />
-                  <div className="p-3">
-                    <h5 title="Pet Consultency website design-project" className="text-primary">Pet Consultency
-                      website design-project</h5>
-                    <p title="HTML | CSS| SCSS | BOOTSTRAP | JAVASCRIPT | JQUERY | PLUGINS ">
-                      HTML | CSS| SCSS | BOOTSTRAP | JAVASCRIPT | JQUERY | PLUGINS </p>
-                    <button className="btn btn-primary fw-bold py-1 px-3"><a
-                      href="https://iftekher2108.github.io/pet-consultency-templete/"
-                      className="nav-link text-white">Live View</a></button>
-                  </div>
-
-                </div>
-
-              </div>
+              <ProjectCard
+                 category='bootstrap' 
+                 picture='image/pet-consultency-Project-Presentation.jpg'
+                 title='Pet Consultancy Website Design Project'
+                 tech='HTML | CSS| SCSS | BOOTSTRAP | JAVASCRIPT | JQUERY | PLUGINS'
+                 link='https://iftekher2108.github.io/pet-consultency-templete'
+                  />
 
               {/* home rent web  */}
-              <div className="col-lg-3 col-md-6 col-sm-12">
-                <div className="project-hover card">
-                  <img src="image/home-solution-Project-Presentation.jpg" className="img-fluid object-fit-cover"
-                    alt="gallery-image" />
-                  <div className="p-3">
-                    <h5 title="Home solution website design-project" className="text-primary">Home solution
-                      website design-project</h5>
-                    <p title="HTML | CSS| SCSS | BOOTSTRAP | JAVASCRIPT | JQUERY | PLUGINS ">
-                      HTML | CSS| SCSS | BOOTSTRAP | JAVASCRIPT | JQUERY | PLUGINS </p>
-                    <button className="btn btn-primary fw-bold py-1 px-3"><a
-                      href="https://iftekher2108.github.io/home-solution-template/"
-                      className="nav-link text-white">Live View</a></button>
-                  </div>
-
-                </div>
-
-              </div>
+              <ProjectCard
+                 category='bootstrap' 
+                 picture='image/home-solution-Project-Presentation.jpg'
+                 title='Home Solution Website Design Project'
+                 tech='HTML | CSS| SCSS | BOOTSTRAP | JAVASCRIPT | JQUERY | PLUGINS'
+                 link='https://iftekher2108.github.io/home-solution-template'
+                  />
 
               {/* TATA web clone   */}
-              <div className="col-lg-3 col-md-6 col-sm-12">
-                <div className="project-hover card">
-                  <img src="./image/tata-web-clone.png" className="img-fluid object-fit-cover"
-                    alt="gallery-image" />
-                  <div className="p-3">
-                    <h5 title="TATA Website Clone" className="text-primary">TATA Website Clone</h5>
-                    <p title="HTML | CSS| SCSS | BOOTSTRAP | JAVASCRIPT | JQUERY | PLUGINS ">
-                      HTML | CSS| SCSS | BOOTSTRAP | JAVASCRIPT | JQUERY | PLUGINS </p>
-                    <button className="btn btn-primary fw-bold py-1 px-3"><a
-                      href="https://iftekher2108.github.io/tata-web/" className="nav-link text-white">Live
-                      View</a></button>
-                  </div>
-
-                </div>
-
-              </div>
+              <ProjectCard
+                 category='bootstrap' 
+                 picture='image/tata-web-clone.png'
+                 title='TATA Website Clone Design Project'
+                 tech='HTML | CSS| SCSS | BOOTSTRAP | JAVASCRIPT | JQUERY | PLUGINS'
+                 link='https://iftekher2108.github.io/tata-web'
+                  />
 
               {/* US whole sale web  */}
-              <div className="col-lg-3 col-md-6 col-sm-12">
-                <div className="project-hover card">
-                  <img src="./image/us-whole-sale.png" className="img-fluid object-fit-cover" alt="gallery-image" />
-                  <div className="p-3">
-                    <h5 title="US whole sale Website" className="text-primary">US Whole sale Website</h5>
-                    <p title="HTML | CSS| SCSS | BOOTSTRAP | JAVASCRIPT | JQUERY | PLUGINS ">
-                      HTML | CSS| SCSS | BOOTSTRAP | JAVASCRIPT | JQUERY | PLUGINS </p>
-                    <button className="btn btn-primary fw-bold py-1 px-3"><a
-                      href="https://iftekher2108.github.io/uk-whole-sale/"
-                      className="nav-link text-white">Live
-                      View</a></button>
-                  </div>
+              <ProjectCard
+                 category='bootstrap' 
+                 picture='image/us-whole-sale.png'
+                 title='US Whole Sale Clone Website'
+                 tech='HTML | CSS| SCSS | BOOTSTRAP | JAVASCRIPT | JQUERY | PLUGINS'
+                 link='https://iftekher2108.github.io/uk-whole-sale'
+                  />
 
-                </div>
+              {/* Calculator Project */}
+              <ProjectCard
+                 category='others' 
+                 picture='image/calculator-Project-Presentation.png'
+                 title='Calculator Software Project'
+                 tech='HTML5 | CSS3 | JAVASCRIPT'
+                 link='https://iftekher2108.github.io/calculator-project'
+                  />
 
-              </div>
+              {/* Currency Project */}
+              <ProjectCard
+                 category='others' 
+                 picture='image/currency-converter.jpg'
+                 title='Currency Converter Project'
+                 tech='HTML | CSS| BOOTSTRAP | JAVASCRIPT | Axios | JQUERY | PLUGINS'
+                 link='https://iftekher2108.github.io/currency-converter'
+                  />
+ 
 
-              <div className="others col-lg-3 col-md-6 col-sm-12">
-                <div className="project-hover card">
-                  <img src="image/calculator-Project-Presentation.png" className="img-fluid object-fit-cover "
-                    alt="gallery-image" />
-                  <div className="p-3">
-                    <h5>Calculator Software Project</h5>
-                    <p title="HTML5 | CSS3 | JAVASCRIPT"> HTML5 | CSS3 | JAVASCRIPT </p>
-                    <button className="btn btn-primary fw-bold py-1 px-3"><a
-                      href="https://iftekher2108.github.io/calculator-project/"
-                      className="nav-link text-white">Live View</a></button>
-                  </div>
+            
 
-                </div>
-
-              </div>
-
-
-              {/* US whole sale web  */}
-              <div className="col-lg-3 col-md-6 col-sm-12">
-                <div className="project-hover card">
-                  <img src="./image/currency-converter.jpg" className="img-fluid object-fit-cover"
-                    alt="gallery-image" />
-                  <div className="p-3">
-                    <h5 title="US whole sale Website" className="text-primary">Currency Converter Project</h5>
-                    <p title="HTML | CSS| SCSS | BOOTSTRAP | JAVASCRIPT | JQUERY | PLUGINS ">
-                      HTML | CSS| BOOTSTRAP | JAVASCRIPT | Axios | JQUERY | PLUGINS </p>
-                    <button className="btn btn-primary fw-bold py-1 px-3"><a
-                      href="https://iftekher2108.github.io/currency-converter/"
-                      className="nav-link text-white">Live
-                      View</a></button>
-                  </div>
-
-                </div>
-
-              </div>
 
 
 
@@ -555,10 +479,9 @@ function Home() {
           </div>
 
         </div>
-
           {/* ===================================================this is contact section end here========================================================================== */}
-
       </main>
+      <Footer/>
     </>
   )
 }
