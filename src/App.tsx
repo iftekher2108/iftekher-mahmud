@@ -4,8 +4,9 @@ import Home from "./pages/Home.tsx";
 import Project from "./pages/Project.tsx";
 
 
-
 function App() {
+
+
     return (
       <BrowserRouter>
       <ScrollToTop /> 

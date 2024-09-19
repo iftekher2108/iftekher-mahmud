@@ -6,6 +6,7 @@ import TypeName from '../components/TypeName'
 import { useEffect } from 'react'
 import Footer from '../components/footer'
 import ProjectCard from '../components/ProjectCard'
+import Perticles from '../components/Perticales'
 
 
 function Home() {
@@ -52,7 +53,9 @@ useEffect(() => {
       <main>
         <div id="home" className="container-fluid overflow-hidden position-relative">
 
-          <div id="particles" className="position-absolute z-2" style={{ height: '100vh' }}></div>
+          <div className="position-absolute z-2">
+              <Perticles/>
+          </div>
 
           <div className="row pt-3 m-0 h-100 overflow-hidden">
             <div className="hero-content col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center p-2 m-0"
